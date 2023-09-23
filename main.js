@@ -1,6 +1,7 @@
 let myform = document.querySelector("form")
 let myTabla = document.querySelector("#myData");
-let elementos = document.getElementsByClassName("updateEvent")
+let elementos;
+
 
 
 addEventListener("DOMContentLoaded", async()=>{ 
@@ -21,9 +22,66 @@ addEventListener("DOMContentLoaded", async()=>{
         `)        
     }); 
 
-    
+        let modificar = null;
+        elementos =  document.querySelectorAll(".updateEvent  :nth-child(2), .updateEvent   :nth-child(3)");
+        
+        
+        elementos.forEach( (x)  =>  x.addEventListener("click",  async(j) => {
+
+            if(!modificar){
+                let valoraCambiar = (j.target)
+                let nuevoContenido;
+
+                modificar = document.createElement("div");
+                let plantilla ='<input type="text" class="inputValorNuevo" placeholder="Ingrese un nuevo valor">'
+                modificar.innerHTML = plantilla;
+                
+                
+                
+                valoraCambiar.parentNode.parentNode.insertBefore(modificar,valoraCambiar.parentNode.nextSibling)
+                
+                let fila = valoraCambiar.parentNode;
+
+                
+                
+
+                modificar.firstElementChild.addEventListener("keydown",async (e)=>{
+                    nuevoContenido = e.target;
+                    
+                    
+                    if (e.key === 'Enter')  {valoraCambiar.textContent = nuevoContenido.value;  nuevoContenido.parentNode.remove(); ;modificar = null;
+                        let config = {
+                            method: 'PUT',
+                            headers: {
+                            'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                "valor": Number(fila.children[1].textContent) ,
+                                "caja": (fila.children[2].textContent ),
+                                "id": fila.children[0].textContent
+                            })
+                        };
+                        let id = String(fila.children[0].textContent)
+                        console.log(id)
+                        let res2 = await (await fetch(`https://650b130adfd73d1fab0987b2.mockapi.io/tabla/${id}`,config)).json();
+                        console.log(res2)
+                    
+                    }
+                    
+                       
+                })
 
 
+                
+
+
+                
+            }
+            
+                
+        }
+    ))
+        
 
 });
 
@@ -47,28 +105,10 @@ myform.addEventListener("submit",async(e)=>{
         
 })
 
-console.log(elementos.length)
 
-elementos.forEach( (x)  =>  x.elemento.addEventListener("click",  async(j) => {
-        
-        data = Object.fromEntries( new FormData(j.target))
-    
-        console.log(data);
 
-        let idElemento;
 
-        
-        let config = {
-            method: 'PUT',
-            headers: {
-            'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(),
-        };
-        res = await (await fetch(`https://650b130adfd73d1fab0987b2.mockapi.io/tabla/${idElemento}`,config)).json();
-        
-    }
-))
+
 
 
 
