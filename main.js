@@ -49,7 +49,7 @@ addEventListener("DOMContentLoaded", async()=>{
                     nuevoContenido = e.target;
                     
                     
-                    if (e.key === 'Enter')  {valoraCambiar.textContent = nuevoContenido.value;  nuevoContenido.parentNode.remove(); ;modificar = null;
+                    if (e.key === 'Enter')  {valoraCambiar.textContent = nuevoContenido.value;  nuevoContenido.parentNode.remove(); modificar=null; 
                         let config = {
                             method: 'PUT',
                             headers: {
@@ -61,7 +61,7 @@ addEventListener("DOMContentLoaded", async()=>{
                                 "id": fila.children[0].textContent
                             })
                         };
-                        let id = String(fila.children[0].textContent)
+                        let id = (fila.children[0].textContent)
                         console.log(id)
                         let res2 = await (await fetch(`https://650b130adfd73d1fab0987b2.mockapi.io/tabla/${id}`,config)).json();
                         console.log(res2)
