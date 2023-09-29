@@ -1,0 +1,16 @@
+{
+  "name": "practicajavascript-api",
+  "version": "1.0.0",
+  "description": "este es un repositorio destinado a practicar con las api, un nuevo concepto visto en clase",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "json-server --watch db.json"
+  },
+  "keywords": [],
+  "author": "Edgar",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "0.17.3"
+  }
+}

@@ -1,0 +1,66 @@
+{
+    "registros" :        [
+        {
+         "valor": 47,
+         "caja": "egreso",
+         "id": "1"
+        },
+        {
+         "valor": 1,
+         "caja": "  egreso  ",
+         "id": "2"
+        },
+        {
+         "valor": 81,
+         "caja": "egreso",
+         "id": "3"
+        },
+        {
+         "valor": 4545,
+         "caja": " egreso ",
+         "id": "4"
+        },
+        {
+         "valor": 43434434,
+         "caja": "ingreso",
+         "id": "5"
+        },
+        {
+         "valor": 1111,
+         "caja": "egreso",
+         "id": "6"
+        },
+        {
+         "valor": 78,
+         "caja": " ingreso ",
+         "id": "7"
+        },
+        {
+         "valor": 554,
+         "caja": "egreso",
+         "id": "8"
+        },
+        {
+         "valor": "6554",
+         "caja": "ingreso",
+         "id": "9"
+        },
+        {
+         "valor": "6666",
+         "caja": "ingreso",
+         "id": "10"
+        },
+        {
+         "valor": 788,
+         "caja": "ingreso",
+         "id": "11"
+        },
+        {
+         "valor": 665,
+         "caja": "ingreso",
+         "id": "12"
+        }
+       ] 
+        
+    
+}

@@ -61,7 +61,7 @@ addEventListener("DOMContentLoaded", async()=>{
                                 "id": fila.children[0].textContent
                             })
                         };
-                        let id = (fila.children[0].textContent)
+                        let id = Number(fila.children[0].textContent)
                         console.log(id)
                         let res2 = await (await fetch(`https://650b130adfd73d1fab0987b2.mockapi.io/tabla/${id}`,config)).json();
                         console.log(res2)
