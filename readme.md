@@ -1,4 +1,4 @@
-# Prascticas API
+# Practicas API
 
 Este es un proyecto con el fin de practicar los conceptos vistos en clase acerca de la manipulacion de el dom y el manejo de la api fetch
 
