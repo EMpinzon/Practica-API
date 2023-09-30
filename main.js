@@ -1,5 +1,6 @@
 let myform = document.querySelector("form")
 let myTabla = document.querySelector("#myData");
+let total = document.querySelector("#total");
 let elementos;
 
 
@@ -113,6 +114,7 @@ myform.addEventListener("submit",async(e)=>{
     
         
 })
+
 
 crearTabla();
 

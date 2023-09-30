@@ -2,33 +2,38 @@
   "registros": [
     {
       "valor": 455,
-      "caja": "   egreso   ",
+      "caja": "ingreso",
       "id": "2"
     },
     {
       "valor": 4545,
-      "caja": " egreso ",
+      "caja": "egreso",
       "id": "4"
     },
     {
-      "valor": 78,
-      "caja": " ingreso ",
+      "valor": 7855,
+      "caja": "ingreso",
       "id": "7"
     },
     {
-      "valor": 666,
-      "caja": " egreso ",
-      "id": "8"
-    },
-    {
-      "valor": 777,
-      "caja": "   egreso   ",
+      "valor": 54654684,
+      "caja": "ingreso",
       "id": "12"
     },
     {
-      "valor": 7777,
-      "caja": "ingreso",
+      "valor": 87878,
+      "caja": "egreso",
       "id": "15"
+    },
+    {
+      "valor": 9879,
+      "caja": "egreso",
+      "id": "16"
+    },
+    {
+      "valor": 8484,
+      "caja": "egreso",
+      "id": "17"
     }
   ]
 }
