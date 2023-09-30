@@ -7,6 +7,8 @@ let elementos;
 
 async function crearTabla (){ 
     let res = await ( await fetch("http://localhost:3000/registros")).json();
+    let ingresos = [];
+    let egresos = [];
     res.forEach(element => {
         myTabla.insertAdjacentHTML("beforeend",`
             <tr class ="updateEvent" >
@@ -17,9 +19,12 @@ async function crearTabla (){
 
 
             </tr>`
-            )        
-        }
+            );
+        (element.caja.includes("ingreso")) ? ingresos.push(element.valor) : egresos.push(element.valor);
+    }
     ); 
+    let valortotal = ingresos.reduce((resultado,x)=>resultado + x,0)  - egresos.reduce((resultado,x)=>resultado + x,0);
+    total.innerText =`El monto que obtienes como resultado es: ${valortotal} `
     let modificar = null;
     elementos =  document.querySelectorAll(".updateEvent  :nth-child(2), .updateEvent   :nth-child(3)");    
     elementos.forEach( (x)  =>  x.addEventListener("click",  async(j) => {
